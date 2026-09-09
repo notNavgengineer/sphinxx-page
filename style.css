@@ -1,4 +1,4 @@
-*, *::before, *::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,13 +14,13 @@
   --hairline-focused: rgba(255, 255, 255, 0.18);
   --white-pure: #ffffff;
   --titanium-silver: #e2e8f0;
-  --titanium-steel: #8e9ba9;
+  --titanium-steel: #8ea990;
   --titanium-dim: #475569;
-  --bugatti-crimson: #dc2626;
+  --bugatti-crimson: #23ff83;
   --bugatti-glow: rgba(220, 38, 38, 0.35);
   --bevel-light: inset 0 1px 0 rgba(255, 255, 255, 0.14), inset 0 -1px 0 rgba(0, 0, 0, 0.7);
   --shadow-architectural: 0 20px 50px rgba(0, 0, 0, 0.95), 0 2px 8px rgba(0, 0, 0, 0.8);
-  --radius-card: 16px;
+  --radius-card: 20px;
   --radius-sm: 8px;
   --radius-pill: 9999px;
 }
@@ -59,8 +59,8 @@ strong {
 }
 
 .container {
-  width: 92%;
-  max-width: 1440px;
+  width: 98%;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -127,15 +127,6 @@ strong {
   color: var(--white-pure);
 }
 
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: var(--bugatti-crimson);
-}
 
 .header-motto {
   font-family: 'Space Mono', monospace;
@@ -163,8 +154,8 @@ strong {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
-  filter: brightness(0.68) contrast(1.15);
+  object-position: center;
+ 
   transition: transform 0.6s ease;
 }
 
@@ -200,8 +191,8 @@ strong {
   display: flex;
   align-items: flex-end;
   gap: 36px;
-  margin-top: -80px;
-  padding-bottom: 20px;
+  margin-top: -66px;
+  padding-bottom: 50px;
   position: relative;
   z-index: 2;
 }
@@ -231,14 +222,14 @@ strong {
 
 .hero-identity {
   flex: 1;
-  padding-top: 86px;
+  padding-top: 110px;
 }
 
 .mono-kicker {
   font-family: 'Space Mono', monospace;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.20em;
   color: var(--titanium-steel);
   display: block;
   margin-bottom: 4px;
@@ -246,7 +237,7 @@ strong {
 
 .hero-moniker {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 84px;
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1;
@@ -276,13 +267,14 @@ strong {
   gap: 30px;
   padding-bottom: 10px;
   flex-shrink: 0;
+  margin-right: 40px;
 }
 
 .dock-chassis {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 14px;
+  padding: 14px 20px;
   background-color: var(--chassis-well);
   border: 1px solid var(--hairline-subtle);
   border-radius: var(--radius-pill);
@@ -293,13 +285,13 @@ strong {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: var(--chassis-elevated);
   border: 1px solid var(--hairline-focused);
   color: var(--titanium-silver);
-  font-size: 19px;
+  font-size: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
@@ -354,12 +346,7 @@ strong {
   color: var(--titanium-steel);
 }
 
-.metric-ruler {
-  display: inline-block;
-  width: 28px;
-  height: 1px;
-  background-color: var(--titanium-dim);
-}
+
 
 .mono-divider {
   color: var(--titanium-dim);
@@ -399,7 +386,7 @@ strong {
 
 .card-display-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -408,7 +395,7 @@ strong {
 }
 
 .card-body-prose {
-  font-size: 14px;
+  font-size: 16.8px;
   color: var(--titanium-steel);
   line-height: 1.75;
   flex: 1;
@@ -419,17 +406,17 @@ strong {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 26px;
+  padding: 18px 32px;
   border-radius: var(--radius-pill);
   background-color: var(--chassis-elevated);
   border: 1px solid var(--hairline-focused);
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 12px;
+  font-size: 15.6px;
   font-weight: 700;
   letter-spacing: 0.14em;
   color: var(--titanium-silver);
   width: fit-content;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -462,22 +449,22 @@ strong {
 }
 
 .stepper-node {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: var(--radius-sm);
   background-color: var(--chassis-elevated);
   border: 1px solid var(--hairline-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 25px;
   color: var(--titanium-steel);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   z-index: 1;
 }
 
 .stepper-rail {
-  width: 1px;
+  width: 4px;
   background-color: var(--hairline-subtle);
   flex: 1;
   min-height: 28px;
@@ -511,7 +498,7 @@ strong {
 }
 
 .stepper-desc {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--titanium-steel);
   line-height: 1.6;
 }
@@ -594,7 +581,7 @@ strong {
   align-items: center;
   gap: 6px;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.14em;
   color: var(--titanium-steel);
@@ -621,7 +608,7 @@ strong {
   border: 1px solid var(--hairline-subtle);
   border-radius: var(--radius-card);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), var(--bevel-light);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.7), var(--bevel-light);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
@@ -663,7 +650,7 @@ strong {
 
 .monolith-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--white-pure);
   margin-bottom: 8px;
@@ -671,7 +658,7 @@ strong {
 }
 
 .monolith-desc {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--titanium-steel);
   line-height: 1.65;
   margin-bottom: 16px;
@@ -685,9 +672,9 @@ strong {
 
 .mono-tag {
   font-family: 'Space Mono', monospace;
-  padding: 5px 12px;
+  padding: 10px 18px;
   border-radius: var(--radius-pill);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--titanium-steel);
   background-color: var(--chassis-well);
@@ -704,7 +691,7 @@ strong {
 .skill-pill {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: 16px 32px;
   border-radius: var(--radius-pill);
   font-size: 12.5px;
   font-weight: 600;
@@ -734,27 +721,30 @@ strong {
 }
 
 .quad-icon-box {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50% ;
   background-color: var(--chassis-elevated);
   border: 1px solid var(--hairline-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 19px;
+  font-size: 30px;
   color: var(--titanium-steel);
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .quad-info {
   display: flex;
+   padding-left: 10px;
   flex-direction: column;
 }
 
 .quad-name {
-  font-size: 14px;
+  padding-top: 10px;
+ 
+  font-size: 30px;
   font-weight: 700;
   color: var(--white-pure);
 }
@@ -767,7 +757,7 @@ strong {
 
 .connect-headline {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
